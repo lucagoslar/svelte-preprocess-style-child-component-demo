@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import seqPreprocessor from 'svelte-sequential-preprocessor';
 import { styleChildComponent } from 'svelte-preprocess-style-child-component';
 import { vitePreprocess } from '@sveltejs/kit/vite';
@@ -10,7 +10,11 @@ const config = {
 	preprocess: seqPreprocessor([vitePreprocess(), styleChildComponent()]),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		paths: {
+			base:
+				process.env.NODE_ENV === 'production' ? '/svelte-preprocess-style-child-component-demo' : ''
+		}
 	}
 };
 
