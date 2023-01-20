@@ -12,7 +12,7 @@
 		color: blue;
 	}
 
-	Child {
+	Component {
 		&::part(paragraph) {
 			text-decoration: line-through;
 			color: red;
