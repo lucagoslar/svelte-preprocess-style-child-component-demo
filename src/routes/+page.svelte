@@ -1,9 +1,9 @@
 <script>
-	import Child from '../lib/Component.svelte';
+	import Component from '$lib/Component.svelte';
 </script>
 
 <div>
-	<Child />
+	<Component />
 	<p>Page</p>
 </div>
 
