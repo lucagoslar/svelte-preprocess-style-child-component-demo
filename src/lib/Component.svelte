@@ -2,8 +2,8 @@
 	<p part="paragraph">Component</p>
 </div>
 
-<style lang="scss">
-	div {
+<style>
+	@layer {
 		p {
 			color: blue;
 		}
